@@ -7,10 +7,3 @@
   height: 400px;
 }
 
-.IceCreamWrapper {
-  grid-column: 1 / 2;
-  grid-row: 1 / 5;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
