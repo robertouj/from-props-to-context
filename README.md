@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+## Challenge 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this step you'll do a bit of refactoring. As you can see, the `App.js` file also holds the `IceCreamWrapper` component. However, for better code organisation, we want to move the `IceCreamWrapper` component in its own subdirectory inside the `component` directory.
 
-## Available Scripts
+### Steps
 
-In the project directory, you can run:
+1. Inside the `components` directory, create a subdirectory for the `IceCreamWrapper` component similar to the ones for the `Colors` component.
+2. Dont forget to create its own styles file along with the component file!
+   Move all the style related to the `IceCreamWrapper` component from the `App` component to the newly created folder.
+3. Now that you are able to display the ice cream correctly again, pass down the `color` as a prop to restore its functionality.
 
-### `npm start`
+## Challenge 2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In this step you'll make it possible for your ice cream to have a wider range of expressions! The emojis to pick the moods are already displayed below the color menu, but the selection does not work yet.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Steps
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Move `moodTypes` into its own `moodsDefault` and turn it into a similar data structure to `colorsDefault` (an array of objects with an `id` and a `isSelected` flag).
+2. By using `useState` as you did for colors, create `moods` and `setMoods`.
+3. Create an action to handle the mood `isSelected` property correctly.
+4. Pass down the props for `items` and `action` to the Mood component like in the `Color` component.
+5. Have the ice cream expression reflect your mood selection passing it down as a prop like with the color. Remember to add a tick next to the selected menu item just like for the color tiles.

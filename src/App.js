@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { IceCream } from "react-kawaii";
+
+import Colors from "./components/colors";
+import { colorsDefault, moodsDefault } from "./initialData";
+import Moods from "./components/moods/Moods";
+
+import "./App.css";
 
 function App() {
+  const [colors, setColors] = useState(colorsDefault);
+
+  const selectColor = (colorId) => {
+    const newColors = colors.map((color) => {
+      return {
+        ...color,
+        isSelected: color.id === colorId
+      };
+    });
+
+    setColors(newColors);
+  };
+
+  const selectedColor = colors.find(({ isSelected }) => isSelected === true).id;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="IceCreamWrapper">
+        <IceCream size={400} color={selectedColor} />
+      </div>
+      <Colors items={colors} action={selectColor} />
+      <Moods />
     </div>
   );
 }
