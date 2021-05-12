@@ -12,8 +12,17 @@
   justify-items: center;
   align-items: center;
   padding: 5px;
+  position: relative;
 }
 
 .Mood {
   cursor: pointer;
+}
+
+.MoodWrapperSelected:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f00c";
+  position: absolute;
+  right: 75%;
+  top: 70%;
 }

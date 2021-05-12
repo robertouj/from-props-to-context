@@ -1,38 +1,67 @@
 const colorsDefault = [
   {
     id: "#F6A7DC",
-    isSelected: true
+    isSelected: true,
   },
   {
     id: "#F7F25D",
-    isSelected: false
+    isSelected: false,
   },
   {
     id: "#90F9E8",
-    isSelected: false
+    isSelected: false,
   },
   {
     id: "#9DE295",
-    isSelected: false
+    isSelected: false,
   },
   {
     id: "#F6B672",
-    isSelected: false
+    isSelected: false,
   },
   {
     id: "#DFABF2",
-    isSelected: false
+    isSelected: false,
   },
   {
     id: "#C8C6EF",
-    isSelected: false
+    isSelected: false,
   },
   {
     id: "#B2E2F7",
-    isSelected: false
-  }
+    isSelected: false,
+  },
 ];
 
-const moodsDefault = [];
+const moodsDefault = [
+  {
+    id: "sad",
+    isSelected: true,
+  },
+  {
+    id: "shocked",
+    isSelected: false,
+  },
+  {
+    id: "happy",
+    isSelected: false,
+  },
+  {
+    id: "blissful",
+    isSelected: false,
+  },
+  {
+    id: "lovestruck",
+    isSelected: false,
+  },
+  {
+    id: "excited",
+    isSelected: false,
+  },
+  {
+    id: "ko",
+    isSelected: false,
+  },
+];
 
 export { colorsDefault, moodsDefault };
